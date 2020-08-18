@@ -1,7 +1,13 @@
 image_version='date +%Y%m%d%H%M';
 echo $image_version;
 # cd Jenkins2Docker
-git pull --rebase origin master;
+git status  
+git add *  
+git commit -m 'Test Git'
+# git commit -m 'add some results from Server'
+git pull --rebase origin master   #domnload data
+git push origin master            #upload data
+git stash pop
 sudo docker stop jenkins2docker;
 sudo docker rm jenkins2docker;
 sudo docker build -t jenkins2docker:$image_version .;
