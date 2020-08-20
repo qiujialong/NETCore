@@ -1,0 +1,38 @@
+services:
+  docker:
+    build:
+      context: C:\Users\qiujialong\source\repos\Docker
+      dockerfile: Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: Docker
+      target: base
+    container_name: Docker
+    entrypoint: tail -f /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      ASPNETCORE_URLS: https://+:443;http://+:80
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      NUGET_FALLBACK_PACKAGES: /root/.nuget/fallbackpackages
+    image: docker:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages
+        --additionalProbingPath /root/.nuget/fallbackpackages  "/app/bin/Debug/netcoreapp3.1/Docker.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    ports:
+    - target: 80
+    - target: 443
+    tty: true
+    volumes:
+    - C:\Users\qiujialong\source\repos\Docker:/app:rw
+    - C:\Users\qiujialong\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\qiujialong\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\qiujialong\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+    - C:\Program Files\dotnet\sdk\NuGetFallbackFolder:/root/.nuget/fallbackpackages:ro
+    - C:\Users\qiujialong\.nuget\packages:/root/.nuget/packages:ro
+    - C:\Users\qiujialong\source\repos\Docker:/src:rw
+version: '3.4'
