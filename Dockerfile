@@ -11,12 +11,9 @@ COPY ["Docker.csproj", ""]
 RUN dotnet restore "./Docker.csproj"
 COPY . .
 WORKDIR "/src/."
-RUN dotnet build "Docker.csproj" -c Release -o /app/build
+RUN dotnet build "Docker.csproj" -c Release -o /app
 
-FROM build AS publish
-RUN dotnet publish "Docker.csproj" -c Release -o /app/publish
+RUN dotnet publish "Docker.csproj" -c Release -o /app
 
-FROM base AS final
 WORKDIR /app
-COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "Docker.dll"] 
+ENTRYPOINT ["dotnet", "Docker.dll"]
