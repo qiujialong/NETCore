@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
   docker:
-    image: ${DOCKER_REGISTRY-}docker
-    build:
-      context: .
-      dockerfile: Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "5006:81"
