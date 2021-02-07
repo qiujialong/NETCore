@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FlawTypeInfos>
+	<FlawTypeInfo Name="检测超时" Code="-2" Name_En="TO" />
+	<FlawTypeInfo Name="未撕膜" Code="-1" Name_En="FM" />
+	<FlawTypeInfo Name="白点" Code="0" Name_En="SP" />
+	<FlawTypeInfo Name="划伤" Code="1" Name_En="SC" />
+	<FlawTypeInfo Name="边缘Chipping" Code="2" Name_En="CP" />
+	<FlawTypeInfo Name="A角偏移" Code="16" Name_En="AS" />
+	<FlawTypeInfo Name="B角偏移" Code="17" Name_En="BS" />
+	<FlawTypeInfo Name="C角偏移" Code="18" Name_En="CS" />
+	<FlawTypeInfo Name="D角偏移" Code="19" Name_En="DS" />
+	<FlawTypeInfo Name="贴合气泡" Code="20" Name_En="BB" />
+	<FlawTypeInfo Name="贴合异物" Code="45" Name_En="CT" />
+	<FlawTypeInfo Name="贴合脏污" Code="46" Name_En="BT" />
+	<FlawTypeInfo Name="LCM凹点" Code="47" Name_En="LC" />
+	<FlawTypeInfo Name="水胶dent" Code="48" Name_En="DT" />
+	<FlawTypeInfo Name="裂纹" Code="49" Name_En="CK" />
+	<FlawTypeInfo Name="Flex缺失" Code="50" Name_En="FX" />
+	<FlawTypeInfo Name="Tape缺失" Code="51" Name_En="TP" />
+	<FlawTypeInfo Name="干扰" Code="52" Name_En="FA" />
+</FlawTypeInfos>

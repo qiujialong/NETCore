@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LineSettings>
+  <LineSetting LineNo="CGA_01" ServerIP="10.73.111.75" DBName="Tunibusinesss_CGA" DBType="1" />
+  <LineSetting LineNo="CGA_02" ServerIP="10.73.111.76" DBName="Tunibusinesss_CGA" DBType="1" />
+  <LineSetting LineNo="CGA_03" ServerIP="10.73.111.77" DBName="Tunibusinesss_CGA" DBType="1" />
+  <LineSetting LineNo="CGA_04" ServerIP="10.73.111.78" DBName="Tunibusinesss_CGA" DBType="1" />
+</LineSettings>
